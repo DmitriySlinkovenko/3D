@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NavItems from "./NavItems";
 import menu from "/assets/menu.svg";
 import close from "/assets/close.svg";
 
@@ -27,7 +28,9 @@ const Navbar = () => {
             <img src={isOpen ? close : menu} alt="toggle" className="w-6 h-6" />
           </button>
 
-          <nav className="sm:flex hidden"></nav>
+          <nav className="sm:flex hidden">
+            <NavItems />
+          </nav>
         </div>
       </div>
     </header>

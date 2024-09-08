@@ -1,12 +1,15 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import HackerRoom from "./HackerRoom";
+import Supernova from "./Supernova";
 import CanvasLoader from "./CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import Target from "./Target";
+import ReactLogo from "./ReactLogo";
+import SupernovaCamera from "./SupernovaCamera";
+import Button from "./Button";
 
 const Hero = () => {
   const controls = useControls("supernova", {
@@ -38,19 +41,33 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <HackerRoom
-              scale={isSmall ? 1.5 : 2.5}
-              position={[0, -2, 2.5]}
-              rotation={[2.5, 2.5, 2.5]}
-            />
+            <SupernovaCamera isMobile={isMobile}>
+              <Supernova
+                scale={isSmall ? 1.5 : 2.5}
+                position={[0, -2, 2.5]}
+                rotation={[2.5, 2.5, 2.5]}
+              />
+            </SupernovaCamera>
+
             <group>
               <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
             </group>
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className="w-fit">
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-96"
+          />
+        </a>
       </div>
     </section>
   );

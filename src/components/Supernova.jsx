@@ -8,11 +8,24 @@ Title: Supernova remnant
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { NoToneMapping } from "three";
 
-const HackerRoom = (props) => {
+const Supernova = (props) => {
+  const nova = useRef();
   const { nodes, materials } = useGLTF("/models/supernova_remnant.glb");
+
+  useGSAP(() => {
+    gsap.to(nova.current.rotation, {
+      y: nova.current.rotation.y + 1,
+      duration: 10,
+      repeat: -1,
+      yoyo: true,
+    });
+  });
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={nova}>
       <group position={[0, 0.014, 0.053]}>
         <points
           geometry={nodes.Object_2.geometry}
@@ -157,4 +170,4 @@ const HackerRoom = (props) => {
 
 useGLTF.preload("/models/supernova_remnant.glb");
 
-export default HackerRoom;
+export default Supernova;

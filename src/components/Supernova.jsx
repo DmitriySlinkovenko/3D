@@ -10,7 +10,6 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { NoToneMapping } from "three";
 
 const Supernova = (props) => {
   const nova = useRef();

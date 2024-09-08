@@ -11,15 +11,15 @@ import SupernovaCamera from "../components/SupernovaCamera";
 import Button from "../components/Button";
 
 const Hero = () => {
-  const controls = useControls("supernova", {
-    scale: { value: 2.5, min: 0.1, max: 10 },
-    rotationX: { value: 2.5, min: -10, max: 10 },
-    rotationY: { value: 2.5, min: -10, max: 10 },
-    rotationZ: { value: 2.5, min: -10, max: 10 },
-    positionX: { value: 0, min: -10, max: 10 },
-    positionY: { value: 0, min: -10, max: 10 },
-    positionZ: { value: 2.5, min: -10, max: 10 },
-  });
+  // const controls = useControls("supernova", {
+  //   scale: { value: 2.5, min: 0.1, max: 10 },
+  //   rotationX: { value: 2.5, min: -10, max: 10 },
+  //   rotationY: { value: 2.5, min: -10, max: 10 },
+  //   rotationZ: { value: 2.5, min: -10, max: 10 },
+  //   positionX: { value: 0, min: -10, max: 10 },
+  //   positionY: { value: 0, min: -10, max: 10 },
+  //   positionZ: { value: 2.5, min: -10, max: 10 },
+  // });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isSmall = useMediaQuery({ maxWidth: 480 });
   const sizes = calculateSizes(isSmall, isMobile);
@@ -58,7 +58,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#contact" className="w-fit">
+        <a href="#about" className="w-fit">
           <Button
             name="Let's work together"
             isBeam

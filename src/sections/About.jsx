@@ -89,7 +89,7 @@ const About = () => {
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="grid-co">
+          <div className="grid-container">
             <img
               src="/assets/grid3.png"
               alt="grid=3"
@@ -119,7 +119,7 @@ const About = () => {
                   src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
                   alt="copy"
                 />
-                <p className="lg:text-2xl md:text-1xl font-medium text-gray_gradient text-white">
+                <p className="lg:text-xl md:text-1xl font-medium text-gray_gradient text-white">
                   dmitriy.slinkovenko@gmail.com
                 </p>
               </div>

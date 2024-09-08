@@ -1,15 +1,14 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import Supernova from "./Supernova";
-import CanvasLoader from "./CanvasLoader";
+import Supernova from "../components/Supernova";
+import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import Target from "./Target";
-import ReactLogo from "./ReactLogo";
-import SupernovaCamera from "./SupernovaCamera";
-import Button from "./Button";
+import ReactLogo from "../components/ReactLogo";
+import SupernovaCamera from "../components/SupernovaCamera";
+import Button from "../components/Button";
 
 const Hero = () => {
   const controls = useControls("supernova", {
@@ -37,7 +36,6 @@ const Hero = () => {
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        {/* <Leva /> */}
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
@@ -50,7 +48,6 @@ const Hero = () => {
             </SupernovaCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
             </group>
 

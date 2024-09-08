@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavItems from "./NavItems";
+import NavItems from "../components/NavItems";
 import menu from "/assets/menu.svg";
 import close from "/assets/close.svg";
 

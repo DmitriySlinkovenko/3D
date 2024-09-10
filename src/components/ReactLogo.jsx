@@ -8,12 +8,19 @@ Title: React logo
 
 import React, { useRef } from "react";
 import { Float, useGLTF } from "@react-three/drei";
+import { useMediaQuery } from "react-responsive";
 
 const ReactLogo = (props) => {
   const { nodes, materials } = useGLTF("/models/react.glb");
+  const isMobile = useMediaQuery({ maxWidth: 1279 });
   return (
     <Float floatIntensity={1}>
-      <group {...props} dispose={null} position={[8, 9, 0]} scale={0.3}>
+      <group
+        {...props}
+        dispose={null}
+        position={isMobile ? [0, -10, 0] : [-15, 0, 0]}
+        scale={1}
+      >
         <mesh
           castShadow
           receiveShadow

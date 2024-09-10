@@ -6,7 +6,6 @@ import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import ReactLogo from "../components/ReactLogo";
 import SupernovaCamera from "../components/SupernovaCamera";
 import Button from "../components/Button";
 
@@ -47,9 +46,9 @@ const Hero = () => {
               />
             </SupernovaCamera>
 
-            <group>
+            {/* <group>
               <ReactLogo position={sizes.reactLogoPosition} />
-            </group>
+            </group> */}
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />

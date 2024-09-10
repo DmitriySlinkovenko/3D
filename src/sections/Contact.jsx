@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
@@ -7,7 +8,30 @@ const Contact = () => {
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await emailjs.send(
+        "service_yuj3h9f",
+        "template_gmvg1ap",
+        {
+          from_name: form.name,
+          to_name: "Dmitriy",
+          from_email: form.email,
+          to_email: "dmitriy.slinkovenko@gmail.com",
+          message: form.message,
+        },
+        "kFZy3BWexvi4s1PXo"
+      );
+      setLoading(false);
+      alert("Your message has been sent!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      alert("Something went wrong!");
+    }
+  };
   return (
     <section className="c-space my-20">
       <div className="relative min-h-screen flex items-center justify-center flex-col">
@@ -81,3 +105,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+//service_yuj3h9f

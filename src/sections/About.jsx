@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
+import CanvasLoader from "../components/CanvasLoader";
+import { Canvas } from "@react-three/fiber";
+import { PerspectiveCamera } from "@react-three/drei";
+import ReactLogo from "../components/ReactLogo";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -89,7 +93,7 @@ const About = () => {
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="grid-container">
+          <div className="grid-container relative">
             <img
               src="/assets/grid3.png"
               alt="grid=3"
@@ -101,6 +105,20 @@ const About = () => {
                 I love solving problems and building things through code. Coding
                 isn't just my profession - it is my passion.
               </p>
+            </div>
+            <div className="w-full h-full absolute inset-0">
+              <Canvas className="w-full h-full">
+                <Suspense fallback={<CanvasLoader />}>
+                  <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+
+                  <group>
+                    <ReactLogo />
+                  </group>
+
+                  <ambientLight intensity={1} />
+                  <directionalLight position={[10, 10, 10]} intensity={0.5} />
+                </Suspense>
+              </Canvas>
             </div>
           </div>
         </div>

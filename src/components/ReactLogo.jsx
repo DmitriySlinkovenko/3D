@@ -13,12 +13,13 @@ import { useMediaQuery } from "react-responsive";
 const ReactLogo = (props) => {
   const { nodes, materials } = useGLTF("/models/react.glb");
   const isMobile = useMediaQuery({ maxWidth: 1279 });
+  const isSmall = useMediaQuery({ maxWidth: 768 });
   return (
     <Float floatIntensity={1}>
       <group
         {...props}
         dispose={null}
-        position={isMobile ? [0, -10, 0] : [-15, 0, 0]}
+        position={isSmall ? [-10, 0, 0] : isMobile ? [0, -10, 0] : [-15, 0, 0]}
         scale={1}
       >
         <mesh

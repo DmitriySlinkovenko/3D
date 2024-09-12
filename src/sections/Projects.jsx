@@ -9,13 +9,15 @@ const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const projectCount = myProjects.length;
   const currentProject = myProjects[selectedProjectIndex];
-  const handleNavigation = (direction) => {
+  const handlePrev = () => {
     setSelectedProjectIndex((prevIndex) => {
-      if (direction === "previous") {
-        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
-      } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-      }
+      return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
+    });
+  };
+
+  const handleNext = () => {
+    setSelectedProjectIndex((prevIndex) => {
+      return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
     });
   };
 
@@ -70,24 +72,14 @@ const Projects = () => {
           </div>
 
           <div className="flex justify-between items-center mt-auto mb-2">
-            <button
-              className="arrow-btn"
-              onClick={() => {
-                handleNavigation("previous");
-              }}
-            >
+            <button className="arrow-btn" onClick={handlePrev}>
               <img
                 src="/assets/left-arrow.png"
                 alt="left arrow"
                 className="w-4 h-4"
               />
             </button>
-            <button
-              className="arrow-btn"
-              onClick={() => {
-                handleNavigation("next");
-              }}
-            >
+            <button className="arrow-btn" onClick={handleNext}>
               <img
                 src="/assets/right-arrow.png"
                 alt="right arrow"

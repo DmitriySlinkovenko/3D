@@ -30,7 +30,7 @@ const About = () => {
               <p className="grid-headtext">Hi, I'm Dmitriy</p>
               <p className="grid-subtext">
                 Having finished a Software Engineering bootcamp, I have honed ny
-                skills in frontend and backend development, .
+                skills in frontend and backend development.
               </p>
             </div>
           </div>
@@ -46,8 +46,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in JavaScript with a focus on React and Next.js
-                ecosystems
+                I specialize in JavaScript with a focus on React ecosystem.
               </p>
             </div>
           </div>
@@ -67,8 +66,8 @@ const About = () => {
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                 labelsData={[
                   {
-                    lat: 40,
-                    lng: -100,
+                    lat: 40.69,
+                    lng: -74,
                     text: "I'm here!",
                     color: "white",
                     size: 9999,
@@ -83,11 +82,13 @@ const About = () => {
               <p className="grid-subtext">
                 I'm based in New York, with remote work available.
               </p>
-              <Button
-                name={"Contact Me"}
-                isBeam
-                containerClass="w-full mt-10"
-              />
+              <a href="#contact">
+                <Button
+                  name={"Contact Me"}
+                  isBeam
+                  containerClass="w-full mt-10"
+                />
+              </a>
             </div>
           </div>
         </div>

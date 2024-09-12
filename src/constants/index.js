@@ -23,11 +23,11 @@ export const navLinks = [
 
 export const myProjects = [
   {
-    title: "Podcastr - AI Podcast Platform",
-    desc: "Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.",
+    title: "What to Wear",
+    desc: "What to Wear is a full stack project built to help users decide what to wear based on weather conditions.",
     subdesc:
-      "Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.",
-    href: "https://www.youtube.com/watch?v=zfAb95tJvZQ",
+      "Built as a unique Software-as-a-Service app with React.js and Express.js, What to Wear is designed for optimal performance and scalability.",
+    href: "https://www.wtwr.root.sx/",
     texture: "/textures/project/project1.mp4",
     logo: "/assets/project-logo1.png",
     logoStyle: {
@@ -44,27 +44,27 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Figma",
+        path: "/assets/figma.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "HTML5",
+        path: "/assets/html.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "CSS3",
+        path: "/assets/CSS3.svg",
       },
     ],
   },
   {
-    title: "LiveDoc - Real-Time Google Docs Clone",
-    desc: "LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.",
+    title: "News Explorer",
+    desc: "News Explorer is a full stack app to search for news, on topics that interest the user, with the ability to save the news.",
     subdesc:
-      "With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.",
-    href: "https://www.youtube.com/watch?v=y5vE8y_f_OM",
+      "With News Explorer, users can experience lightning fast news searching by using React.js and Express newest features.",
+    href: "https://news-explorerds22.root.sx/",
     texture: "/textures/project/project2.mp4",
     logo: "/assets/project-logo2.png",
     logoStyle: {
@@ -81,27 +81,27 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Figma",
+        path: "/assets/figma.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "HTML5",
+        path: "/assets/html.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "CSS3",
+        path: "/assets/CSS3.svg",
       },
     ],
   },
   {
-    title: "CarePulse - Health Management System",
-    desc: "An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.",
+    title: "Around the US",
+    desc: " Front end app build to share beautiful pictures of US nature amongst users. It simplifies the ability to share and like each others pictures.",
     subdesc:
-      "With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.",
-    href: "https://www.youtube.com/watch?v=lEflo_sc82g",
+      "With a focus on efficiency, Around the US integrantes forms and form validations, by using JS.",
+    href: "https://dmitriyslinkovenko.github.io/se_project_aroundtheus/",
     texture: "/textures/project/project3.mp4",
     logo: "/assets/project-logo3.png",
     logoStyle: {
@@ -115,23 +115,23 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
+        name: "JS",
+        path: "/assets/js.svg",
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
+        name: "Figma",
+        path: "/assets/figma.svg",
       },
       {
         id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
+        name: "HTML5",
+        path: "/assets/html.svg",
       },
       {
         id: 4,
-        name: "Framer Motion",
-        path: "/assets/framer.png",
+        name: "CSS3",
+        path: "/assets/CSS3.svg",
       },
     ],
   },
@@ -190,7 +190,7 @@ export const workExperiences = [
     duration: "2017 - 2024",
     title:
       "Created and managed inventory of over 400 items, shared across the company resulting in more efficient allocation of workforce.  Successfully completed advanced training in automotive locksmith techniques and technologies, enhancing service capabilities and expertise.  Increased revenue by 35% through upselling of security upgrades and additional services during customer interactions.",
-    icon: "/assets/figma.svg",
+    icon: "/assets/ack.svg",
     animation: "clapping",
   },
   {
@@ -200,7 +200,7 @@ export const workExperiences = [
     duration: "2015 - 2016",
     title:
       "Spearheaded initiatives that led to a 15% increase in sales revenue over a 12-month period by implementing strategicmerchandising and promotional displays. Achieved a 20% improvement in customer satisfaction scores through effective staff training programs and improved service protocols, resulting in higher repeat business and positive customer feedback. Created compelling displays and layouts that increased foot traffic by 10% and contributed to a 12% rise in impulse buys.",
-    icon: "/assets/notion.svg",
+    icon: "/assets/marshalls.svg",
     animation: "salute",
   },
 ];

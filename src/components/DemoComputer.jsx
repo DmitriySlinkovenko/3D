@@ -15,7 +15,10 @@ const DemoComputer = (props) => {
   const group = useRef();
   const { nodes, materials } = useGLTF("/models/ultrawide_monitor.glb");
   const txt = useVideoTexture(
-    props.texture ? props.texture : "/textures/project/project1.mp4"
+    props.texture ? props.texture : "/textures/project/project1.mp4",
+    {
+      muted: true,
+    }
   );
 
   useGSAP(() => {

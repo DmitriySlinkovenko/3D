@@ -84,7 +84,9 @@ const Projects = () => {
             </button>
             <button
               className="arrow-btn"
-              onClick={() => handleNavigation("next")}
+              onClick={() => {
+                handleNavigation("next");
+              }}
             >
               <img
                 src="/assets/right-arrow.png"

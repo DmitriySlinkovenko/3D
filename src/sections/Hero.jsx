@@ -4,14 +4,12 @@ import { PerspectiveCamera } from "@react-three/drei";
 import Supernova from "../components/Supernova";
 import CanvasLoader from "../components/CanvasLoader";
 import { useMediaQuery } from "react-responsive";
-import { calculateSizes } from "../constants";
 import SupernovaCamera from "../components/SupernovaCamera";
 import Button from "../components/Button";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isSmall = useMediaQuery({ maxWidth: 480 });
-  const sizes = calculateSizes(isSmall, isMobile);
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">

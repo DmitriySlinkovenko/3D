@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/ultrawide-monitor-f84d24b6df3648d884fd9b
 Title: Ultrawide Monitor
 */
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useGLTF, useVideoTexture } from "@react-three/drei";
@@ -18,8 +18,15 @@ const DemoComputer = (props) => {
     props.texture ? props.texture : "/textures/project/project1.mp4",
     {
       muted: true,
+      playsInline: true,
     }
   );
+
+  useEffect(() => {
+    if (txt) {
+      txt.flipY = true;
+    }
+  }, [txt]);
 
   useGSAP(() => {
     gsap.from(group.current.rotation, {
@@ -28,6 +35,7 @@ const DemoComputer = (props) => {
       ease: "power3.out",
     });
   }, [txt]);
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, -0.001, Math.PI]}>

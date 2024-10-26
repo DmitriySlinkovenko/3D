@@ -5,6 +5,7 @@ import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import ReactLogo from "../components/ReactLogo";
+import resume from "../assets/my_resume.pdf";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -126,11 +127,6 @@ const About = () => {
 
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
-            <img
-              src="assets/grid4.png"
-              alt="grid-4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
-            />
             <div className="space-y-2">
               <p className="grid-headtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
@@ -143,6 +139,15 @@ const About = () => {
                 </p>
               </div>
             </div>
+            <button className="grid-headtext text-center mt-10">
+              <a
+                href={resume}
+                download="resume"
+                className="gradient-background"
+              >
+                Download my resume
+              </a>
+            </button>
           </div>
         </div>
       </div>

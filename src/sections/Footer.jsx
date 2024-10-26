@@ -23,15 +23,15 @@ const Footer = () => {
           </div>
         </a>
         <a
-          href="https://www.facebook.com/dmitriy.slinkovenko"
+          href="https://www.linkedin.com/in/dmitriy-slinkovenko"
           target="_blank"
           rel="noreferrer"
         >
           <div className="social-icon">
             <img
-              src="/assets/fb-icon.svg"
+              src="/assets/linkedin.svg"
               alt="facebook"
-              className="w-1/2 h-1/2"
+              className="w-10 h-10"
             />
           </div>
         </a>

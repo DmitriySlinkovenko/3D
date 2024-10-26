@@ -169,6 +169,26 @@ body {
   );
 }
 
+.gradient-background {
+  background: linear-gradient(288deg, #a692e8, #ab4963, #be0e2f, #1f7da7);
+  background-size: 240% 240%;
+  animation: gradient-animation 4s ease infinite;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);

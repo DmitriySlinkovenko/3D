@@ -139,11 +139,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <button className="grid-headtext text-center mt-10">
+            <button className="text-2xl font-bold text-center mt-10 hover:-translate-y-1 transition-all duration-500 hover:scale-110">
               <a
                 href={resume}
                 download="resume"
-                className="gradient-background"
+                className="gradient-background "
               >
                 Download my resume
               </a>

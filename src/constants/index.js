@@ -140,6 +140,16 @@ export const myProjects = [
 export const workExperiences = [
   {
     id: 1,
+    name: "OFCA",
+    pos: "Full Stack Developer",
+    duration: "2025",
+    title:
+      "Built a redesigned OFCA app from Figma design with React, TailwindCSS, and Ant Components speeding up the production process by 30%.  Integrated Apollo Client and GraphQL in a team environment to streamline data fetching and improve app scalability.  Collaborated with a team of developers using Git and Agile workflows to coordinate features, code reviews, and deployments.",
+    icon: "/assets/marshalls.svg",
+    animation: "salute",
+  },
+  {
+    id: 2,
     name: "Swift Car Keys",
     pos: "Business owner and Locksmith",
     duration: "2024 - Present",
@@ -149,7 +159,7 @@ export const workExperiences = [
     animation: "victory",
   },
   {
-    id: 2,
+    id: 3,
     name: "Any Car Keys",
     pos: "Locksmith",
     duration: "2017 - 2024",
@@ -157,15 +167,5 @@ export const workExperiences = [
       "Created and managed inventory of over 400 items, shared across the company resulting in more efficient allocation of workforce.  Successfully completed advanced training in automotive locksmith techniques and technologies, enhancing service capabilities and expertise.  Increased revenue by 35% through upselling of security upgrades and additional services during customer interactions.",
     icon: "/assets/ack.svg",
     animation: "clapping",
-  },
-  {
-    id: 3,
-    name: "Marshall's",
-    pos: "Sales Coordinator",
-    duration: "2015 - 2016",
-    title:
-      "Spearheaded initiatives that led to a 15% increase in sales revenue over a 12-month period by implementing strategicmerchandising and promotional displays. Achieved a 20% improvement in customer satisfaction scores through effective staff training programs and improved service protocols, resulting in higher repeat business and positive customer feedback. Created compelling displays and layouts that increased foot traffic by 10% and contributed to a 12% rise in impulse buys.",
-    icon: "/assets/marshalls.svg",
-    animation: "salute",
   },
 ];
